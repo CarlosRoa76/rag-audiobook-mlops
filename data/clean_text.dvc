@@ -1,0 +1,6 @@
+outs:
+- md5: 8bcc1210313c9946069cd7d058a1ac42.dir
+  size: 39054
+  nfiles: 1
+  hash: md5
+  path: clean_text
