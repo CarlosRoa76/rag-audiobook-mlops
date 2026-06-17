@@ -40,3 +40,31 @@ rag_audiobook_pipeline/
 ├── app.py                  # Interfaz Streamlit
 ├── main.py                 # Orquestador del backend CLI
 └── requirements.txt        # Dependencias
+```
+---
+
+##🚀 Instalación y Uso
+Clonar y configurar entorno
+```
+git clone [https://github.com/TU_USUARIO/rag-audiobook-mlops.git](https://github.com/TU_USUARIO/rag-audiobook-mlops.git)
+cd rag_audiobook_pipeline
+conda create -p venv python=3.11 -y
+conda activate ./venv
+pip install -r requirements.txt
+```
+## Recuperar los datos versionados
+Para descargar los modelos de datos y archivos de prueba desde DagsHub:
+```
+dvc pull
+```
+
+## Configurar Credenciales
+Crea un archivo .env en la raíz del proyecto y añade tu API Key de Groq:
+```
+GROQ_API_KEY=tu_clave_aqui
+```
+## Ejecutar la Aplicación
+```
+streamlit run app.py
+```
+Abre tu navegador, sube un PDF y genera tu audiolibro
