@@ -2,12 +2,10 @@ import os
 import time
 from pathlib import Path
 from dotenv import load_dotenv
-# ¡Adios Google! Hola Groq:
 from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-# Cargar las variables de entorno (.env)
 load_dotenv()
 
 class TextTransformer:
@@ -30,7 +28,6 @@ class TextTransformer:
         
         self.chain = self.prompt | self.llm
 
-        # Divisor de texto
         self.text_splitter = RecursiveCharacterTextSplitter(
             chunk_size=4000,
             chunk_overlap=200,
